@@ -1,5 +1,6 @@
 package com.yoonslab.common;
 
+import com.yoonslab.common.dto.ApiResponse;
 import com.yoonslab.common.dto.CursorPageResponse;
 import com.yoonslab.common.dto.PageResponse;
 
@@ -13,8 +14,10 @@ public class Demo {
 
     public static void main(String[] args) {
         pageResponseDemo();
-        System.out.println("test..");
+        System.out.println();
         cursorPageResponseDemo();
+        System.out.println();
+        apiResponseDemo();
     }
 
     static void pageResponseDemo() {
@@ -53,5 +56,19 @@ public class Demo {
         System.out.println("nextCursor   : " + res.getNextCursor());     // 42
         System.out.println("hasNext      : " + res.isHasNext());         // true
         System.out.println("totalElements: " + res.getTotalElements());  // 10
+    }
+
+    static void apiResponseDemo() {
+        System.out.println("=== ApiResponse ===");
+
+        ApiResponse<String> ok = ApiResponse.ok("조회 성공", "hello");
+        System.out.println("success : " + ok.isSuccess());   // true
+        System.out.println("message : " + ok.getMessage());  // 조회 성공
+        System.out.println("data    : " + ok.getData());     // hello
+
+        ApiResponse<Void> fail = ApiResponse.fail("존재하지 않는 리소스");
+        System.out.println("success : " + fail.isSuccess()); // false
+        System.out.println("message : " + fail.getMessage()); // 존재하지 않는 리소스
+        System.out.println("data    : " + fail.getData());   // null
     }
 }
