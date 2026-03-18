@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.yoonslab.common.dto.CursorPageResponseTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-03-18T05:54:59.870Z" hostname="DESKTOP-081M7UJ" time="0.042">
-  <properties/>
-  <testcase name="마지막 페이지 - hasNext=false, nextCursor=null" classname="com.yoonslab.common.dto.CursorPageResponseTest" time="0.034"/>
-  <testcase name="생성자로 직접 생성" classname="com.yoonslab.common.dto.CursorPageResponseTest" time="0.005"/>
-  <testcase name="Builder로 생성 - 다음 페이지 있음" classname="com.yoonslab.common.dto.CursorPageResponseTest" time="0.002"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

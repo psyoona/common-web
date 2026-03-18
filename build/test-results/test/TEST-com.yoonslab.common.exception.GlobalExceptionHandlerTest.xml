@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.yoonslab.common.exception.GlobalExceptionHandlerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-03-18T05:54:59.919Z" hostname="DESKTOP-081M7UJ" time="0.01">
-  <properties/>
-  <testcase name="NoSuchElementException → 404 Not Found" classname="com.yoonslab.common.exception.GlobalExceptionHandlerTest" time="0.009"/>
-  <testcase name="IllegalArgumentException → 400 Bad Request" classname="com.yoonslab.common.exception.GlobalExceptionHandlerTest" time="0.001"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

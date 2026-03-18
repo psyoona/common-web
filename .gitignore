@@ -1,0 +1,21 @@
+# ── Gradle 빌드 산출물 ──
+.gradle/
+build/
+
+# ── 로컬 Gradle 설정 (개인 환경마다 다름) ──
+gradle-app.setting
+.gradletasknamecache
+
+# ── IDE ──
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+
+# ── OS ──
+.DS_Store
+Thumbs.db
+
+# ── 로그 ──
+*.log

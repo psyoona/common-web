@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html","k":"18"},{"l":"com.yoonslab.common.dto"},{"l":"com.yoonslab.common.exception"}];updateSearchResults();
