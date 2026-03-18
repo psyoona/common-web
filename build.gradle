@@ -27,6 +27,9 @@ jar {
 
 // ── Sources & Javadoc JAR ──
 java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(25)
+    }
     withSourcesJar()
     withJavadocJar()
 }
@@ -102,4 +105,11 @@ repositories {
 // api: common-web을 쓰는 프로젝트에서도 spring-web 클래스 접근 가능
 dependencies {
     api 'org.springframework.boot:spring-boot-starter-web'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+// ── 테스트 ──
+tasks.named('test') {
+    useJUnitPlatform()
 }

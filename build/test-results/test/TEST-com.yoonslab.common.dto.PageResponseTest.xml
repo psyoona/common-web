@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.yoonslab.common.dto.PageResponseTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-03-18T05:54:59.914Z" hostname="DESKTOP-081M7UJ" time="0.002">
+  <properties/>
+  <testcase name="전체 25개, 페이지 크기 10 → totalPages=3" classname="com.yoonslab.common.dto.PageResponseTest" time="0.001"/>
+  <testcase name="1페이지 → startPage=1, endPage=3, hasPrevious=false" classname="com.yoonslab.common.dto.PageResponseTest" time="0.0"/>
+  <testcase name="데이터 없을 때 → totalPages=0, hasNext=false" classname="com.yoonslab.common.dto.PageResponseTest" time="0.001"/>
+  <testcase name="11페이지 → startPage=11, hasPrevious=true" classname="com.yoonslab.common.dto.PageResponseTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
