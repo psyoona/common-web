@@ -113,3 +113,11 @@ dependencies {
 tasks.named('test') {
     useJUnitPlatform()
 }
+
+// ── 콘솔 데모 실행 ──
+tasks.register('runDemo', JavaExec) {
+    group = 'demo'
+    description = '라이브러리 동작을 콘솔에서 직접 확인'
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'com.yoonslab.common.Demo'
+}
