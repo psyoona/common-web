@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Implementation-Title: common-web
+Implementation-Version: 1.00.000
+Implementation-Vendor: com.example
+
