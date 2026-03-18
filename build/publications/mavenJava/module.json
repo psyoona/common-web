@@ -28,7 +28,7 @@
           "group": "org.springframework.boot",
           "module": "spring-boot-starter-web",
           "version": {
-            "requires": "3.4.4"
+            "requires": "3.4.3"
           }
         }
       ],
@@ -58,7 +58,7 @@
           "group": "org.springframework.boot",
           "module": "spring-boot-starter-web",
           "version": {
-            "requires": "3.4.4"
+            "requires": "3.4.3"
           }
         }
       ],

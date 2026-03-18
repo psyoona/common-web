@@ -4,8 +4,9 @@
 //   - 페이징 DTO (PageResponse, CursorPageResponse)
 //   - 공통 예외 핸들러 (GlobalExceptionHandler)
 //
-// 배포: ./gradlew :common-web:publishToMavenLocal
-// 의존성: implementation 'com.example:common-web:1.00.000'
+// 로컬 배포:  ./gradlew publishToMavenLocal
+// 원격 배포:  ./gradlew publishMavenJavaPublicationToGitHubPackagesRepository
+// 의존성: implementation 'com.yoonslab:common-web:1.00.000'
 // ──────────────────────────────────────────────
 plugins {
     id 'java-library'
@@ -73,15 +74,15 @@ publishing {
         // 로컬 Maven 저장소 (~/.m2/repository)
         mavenLocal()
 
-        // 원격 저장소 (Nexus, Artifactory 등) - 필요 시 주석 해제
-        // maven {
-        //     name = 'nexus'
-        //     url  = uri("https://your-nexus.example.com/repository/maven-releases/")
-        //     credentials {
-        //         username = findProperty('nexusUser') ?: ''
-        //         password = findProperty('nexusPassword') ?: ''
-        //     }
-        // }
+        // GitHub Packages
+        maven {
+            name = 'GitHubPackages'
+            url  = uri("https://maven.pkg.github.com/${githubOwner}/${githubRepo}")
+            credentials {
+                username = findProperty('githubActor') ?: System.getenv('GITHUB_ACTOR')
+                password = findProperty('githubToken') ?: System.getenv('GITHUB_TOKEN')
+            }
+        }
     }
 }
 
