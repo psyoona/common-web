@@ -3,6 +3,7 @@ package com.yoonslab.common;
 import com.yoonslab.common.dto.ApiResponse;
 import com.yoonslab.common.dto.CursorPageResponse;
 import com.yoonslab.common.dto.PageResponse;
+import com.yoonslab.common.security.SecurityHelper;
 
 import java.util.List;
 
@@ -18,6 +19,8 @@ public class Demo {
         cursorPageResponseDemo();
         System.out.println();
         apiResponseDemo();
+        System.out.println();
+        securityHelperDemo();
     }
 
     static void pageResponseDemo() {
@@ -70,5 +73,20 @@ public class Demo {
         System.out.println("success : " + fail.isSuccess()); // false
         System.out.println("message : " + fail.getMessage()); // 존재하지 않는 리소스
         System.out.println("data    : " + fail.getData());   // null
+    }
+
+    static void securityHelperDemo() {
+        System.out.println("=== SecurityHelper (AES-256) ===");
+
+        String key       = "my-secret-key-32bytes!!_padding!!";
+        String plaintext = "민감한 데이터입니다.";
+
+        String encrypted = SecurityHelper.encrypt(plaintext, key);
+        String decrypted = SecurityHelper.decrypt(encrypted, key);
+
+        System.out.println("평문      : " + plaintext);
+        System.out.println("암호화    : " + encrypted);
+        System.out.println("복호화    : " + decrypted);
+        System.out.println("일치여부  : " + plaintext.equals(decrypted)); // true
     }
 }
